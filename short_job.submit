@@ -1,11 +1,14 @@
-Universe = vanilla
+Universe = grid
+grid_resource = batch condor dbala@login.ci-connect.uchicago.edu
 
 Executable = short.sh
-Arguments = 5 # to sleep 5 seconds
+arguments = 5
 
-Error = log/campus.err.$(Cluster)-$(Process)
-Output = log/campus.out.$(Cluster)-$(Process)
-Log = log/campus.log.$(Cluster)
+Error = log.err.$(Cluster)-$(Process)
+Output = log.out.$(Cluster)-$(Process)
+Log = log.log.$(Cluster)
 
-Queue 25
++ProjectName="ConnectTrain"
+Queue 2
+
 
